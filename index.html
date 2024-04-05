@@ -10,7 +10,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
   
-  <link rel="stylesheet" href=" /styles.css">
+  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="public/css/queries.css">
   
   <!-- Boxicons -->
@@ -29,7 +29,7 @@
 
       <div class="nav__menu" id="nav-menu">
         <ul class="nav__list">
-          <li class="nav__item"><a href="#login" class="nav__link">Login</a></li>
+          <li class="nav__item"><a href="#login" class="nav__link active">Login</a></li>
           <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
           <li class="nav__item"><a href="#governmentEntity" class="nav__link">Government Entiy</a></li>
           <li class="nav__item"><a href="#Tenders" class="nav__link">Tenders</a></li>
@@ -41,8 +41,7 @@
         <i class='bx bx-menu'></i>
       </div>
     </nav>
-    
-  </header>
+</header>
 
   <main class="l-main">
     <section>
@@ -63,28 +62,30 @@
             </div>
           </a>
 
-          <a href="#Tenders" class="home__scroll-link">
+          <a href="#Tenders">
             <div class="mouse"><div class="scoll-dot"></div>
           </a>
 
-         <a href="#about" class="home__scroll-link">
-          <div class="mouse"><div class="scoll-dot"></div>      
+         <a href="#about">
+          <div class="arrow">      
         </a>
 
           <a href="#contact">
-            <div class="home__scroll-mouse"></div>
+            <div class="mouse"></div>
           </a>
         </div>
        </div>
     </section>
 
     <!-- About -->
-  <section id="about">
+  <section class="about section" id="about">
     <h2 class="section-title">About</h2>
+
     <div class="about__container bd-grid">
       <div class="about__img">
         <img src="Images/logo.jpeg" alt="">
       </div>
+      
       <div>
         <h2 class="about__subtitle">We are ProcureTech</h2>
         <p class="about__text">ProcuTech system is designed to provide a comprehensive and transparent procurement management platform for government entities and vendors.</p>
