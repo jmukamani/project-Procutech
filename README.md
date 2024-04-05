@@ -40,6 +40,8 @@ Python 3.x
 MySQL database
 Web browser (Chrome, Firefox, Safari, etc.)
 
+
+
 **Installation**
 Clone the repository:
 git clone https://github.com/jmukamani/project-procuretech
@@ -47,10 +49,11 @@ Navigate to the project directory:
 cd procuretech
 
 Install the required dependencies:
-pip install -r requirements.txt
+pip install -r requirements.txt or run ./procureTech-setup
+
 Set up the MySQL database:
 Create a new MySQL database for the project.
-Update the database configuration in config.py with your database credentials.
+Update the database configuration in database.py with your database credentials.
 Run the database migrations:
 
 Start the development server:
