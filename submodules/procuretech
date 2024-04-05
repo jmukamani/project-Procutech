@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+#  Add submodules folder to the list of folders that python searches for imported modules
+export const PYTHONPATH="$PYTHONPATH:$PROCURETECH_PROJECT_DIR/submodules"
+
+#  Running the main python script
+python3 $PROCURETECH_PROJECT_DIR/submodules/procuretech/main.pyexport const PYTHONPATH = "$PYTHONPATH:$PROCURETECH_PROJECT_DIR/submodules";export const PYTHONPATH = "$PYTHONPATH:$PROCURETECH_PROJECT_DIR/submodules";

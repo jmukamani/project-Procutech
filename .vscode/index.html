@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K5TWSH');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+  
+  <link rel="stylesheet" href=" /styles.css">
+  <link rel="stylesheet" href="public/css/queries.css">
+  
+  <!-- Boxicons -->
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  
+
+  <title>ProcureTech</title>
+</head>
+
+<body>
+  <header class="l-header">
+    <nav class="nav bd-grid">
+      <div>
+        <a href="#" class="nav__logo">ProcureTech</a>
+      </div>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#login" class="nav__link">Login</a></li>
+          <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+          <li class="nav__item"><a href="#governmentEntity" class="nav__link">Government Entiy</a></li>
+          <li class="nav__item"><a href="#Tenders" class="nav__link">Tenders</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="nav__toggle" id="nav-toggle">
+        <i class='bx bx-menu'></i>
+      </div>
+    </nav>
+    
+  </header>
+
+  <main class="l-main">
+    <section>
+    <h2> Welcome to ProcureTech Management system</h2>
+    <p>This system facilitates seamless collaboration between government entities and vendors.</p>
+    </section>
+    
+     <!-- Home -->
+    <section class="home" id="home">
+      <div class="home__container bd-grid">
+        <h1 class="home__title"><span>ProcureTech</span></h1>
+        <h2 class="home__subtitle"><span>Procurement<br>Management System</span></h2>
+
+        <div class="home__scroll">
+          <a href="#governmentEntity" class="home__scroll-link">
+            <div class="mouse"><div class="scoll-dot"></div>
+
+            </div>
+          </a>
+
+          <a href="#Tenders" class="home__scroll-link">
+            <div class="mouse"><div class="scoll-dot"></div>
+          </a>
+
+         <a href="#about" class="home__scroll-link">
+          <div class="mouse"><div class="scoll-dot"></div>      
+        </a>
+
+          <a href="#contact">
+            <div class="home__scroll-mouse"></div>
+          </a>
+        </div>
+       </div>
+    </section>
+
+    <!-- About -->
+  <section id="about">
+    <h2 class="section-title">About</h2>
+    <div class="about__container bd-grid">
+      <div class="about__img">
+        <img src="Images/logo.jpeg" alt="">
+      </div>
+      <div>
+        <h2 class="about__subtitle">We are ProcureTech</h2>
+        <p class="about__text">ProcuTech system is designed to provide a comprehensive and transparent procurement management platform for government entities and vendors.</p>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- User Login Form -->
+    <section>
+      <div class="form-container" id="loginContainer">
+        <h2 style="color: rgb(10, 10, 224);">Login</h2>
+        <form id="loginForm">
+            <select id="BRANCH" name="BRANCH" required>
+                <option value="Government">Government office</option>
+                <option value="Vendor">Vendor</option>
+                <option value="Bidder">Bidder</option>
+                <option value="Anaji-K">Anaji-K</option>
+                <option value="Type C">Type C</option>
+                <option value="Vol Mgt">Vol Mgt</option>
+                <option value="Agona">Agona</option>
+                <option value="Axim">Axim</option>
+                <option value="Esiama">Esiama</option>
+                <option value="Elubo">Elubo</option>
+                <option value="Half Assini">Half Assini</option>
+            </select>
+            <input type="text" id="username" placeholder="Email or Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="button" onclick="login()">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Login
+            </button>
+        </form>
+        <div class="register-link">
+            <p>Don't have an account? <a href="#" onclick="showRegistrationForm()">Register</a></p>
+        </div>
+    </div>
+
+    <div class="form-container" id="registrationContainer" style="display: none;">
+        <h2 style="color: rgb(21, 21, 220);">Register</h2>
+        <form id="registrationForm" action="register.js" method="POST">
+            <select id="BRANCH" name="BRANCH" required>
+                <option value="Government Office">Government Office</option>
+                <option value="Vendor">Vendor</option>
+                <option value="Bidder">Bidder</option>
+                <option value="Anaji-K">Anaji-K</option>
+                <option value="Type C">Type C</option>
+                <option value="Vol Mgt">Vol Mgt</option>
+                <option value="Agona">Agona</option>
+                <option value="Axim">Axim</option>
+                <option value="Esiama">Esiama</option>
+                <option value="Elubo">Elubo</option>
+                <option value="Half Assini">Half Assini</option>
+            </select>
+            <input type="text" name="AgentName" placeholder="Agent Name" required>
+            <select name="position" required>
+                <option value="" disabled selected>Select Position</option>
+                <option value="Branch Head">Branch Head</option>
+                <option value="DSR">DSR</option>
+                <option value="Customer">Customer Service</option>
+            </select>
+            <input type="text" name="Username" placeholder="Username" required>
+            <input type="email" name="Email" placeholder="Email" required>
+            <input type="password" name="Password" placeholder="Password" required>
+            <button type="submit">Register</button>
+            <div class="register-link">
+                <p>Already have an account? <a href="register.html" onclick="showLogin()">Login</a></p>
+            </div>
+        </form>
+    </div>
+    </section>   
+      
+
+  <!-- Requisition Submission Form -->
+  <section>
+  <h2>Submit Requisition</h2>
+  <form id="requisitionForm">
+    <label for="itemDescription">Item Description:</label>
+    <textarea id="itemDescription" name="itemDescription" required></textarea>
+    <label for="budgetAllocation">Budget Allocation:</label>
+    <input type="number" id="budgetAllocation" name="budgetAllocation" required>
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" required>
+    <button type="submit">Submit Requisition</button>
+  </form>
+  </section>
+
+  <!-- Government Entity List -->
+  <section id="governmentEntity">
+    <h2>Government Entity List</h2>
+    <ul id="governmentEntityList">
+      <li id="menu-item-17482" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17482"><a href="https://www.procurify.com/procure-to-pay/procurement/#expenses" itemprop="url">Expenses</a></li>
+      <li id="menu-item-17241" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17241"><a href="https://www.procurify.com/procure-to-pay/procurement/#approvals" itemprop="url">Approvals</a></li>
+      <li id="menu-item-17483" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17483"><a href="https://www.procurify.com/procure-to-pay/procurement/#purchase-order-management" itemprop="url">PO Management</a></li>
+      <li id="menu-item-17242" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17242"><a href="https://www.procurify.com/procure-to-pay/procurement/#contract-management" itemprop="url">Contract Management</a></li>
+      <li id="menu-item-17243" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17243"><a href="https://www.procurify.com/procure-to-pay/procurement/#vendor-management" itemprop="url">Vendor Management</a></li>
+      <li id="menu-item-17244" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17244"><a href="https://www.procurify.com/procure-to-pay/procurement/#receiving" itemprop="url">Receiving</a></li>
+      <li id="menu-item-17484" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17484"><a href="https://www.procurify.com/procure-to-pay/procurement/#budget-management" itemprop="url">Budget Management</a></li>
+      <li id="menu-item-17245" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17245"><a href="https://www.procurify.com/procure-to-pay/procurement/#reporting" itemprop="url">Reporting</a></li>
+      <li id="menu-item-17236" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17236"><a href="https://www.procurify.com/procure-to-pay/procurement/" itemprop="url">Explore</a></li>
+    </ul>
+
+  </section>
+
+  <!-- Tenders List -->
+  <section id="Tendering">
+    <h2>Tendering</h2>
+    <form id="tenderSubmissionForm">
+      <label for="vendorId">Vendor ID:</label>
+      <input type="text" id="vendorId" name="vendorId" required>
+      <label for="opportunityId">Opportunity ID:</label>
+      <input type="text" id="opportunityId" name="opportunityId" required>
+      <label for="documentation">Documentation:</label>
+      <input type="file" id="documentation" name="documentation" required>
+      <label for="pricing">Pricing:</label>
+      <input type="number" id="pricing" name="pricing" required>
+      <button type="submit">Submit Bid</button>
+    </form>
+  
+    <form id="opportunityPostingForm">
+      <label for="entityId">Entity ID:</label>
+      <input type="text" id="entityId" name="entityId" required>
+      <label for="tenderNotice">Tender Notice:</label>
+      <textarea id="tenderNotice" name="tenderNotice" required></textarea>
+      <label for="requirements">Requirements:</label>
+      <textarea id="requirements" name="requirements" required></textarea>
+      <button type="submit">Post Opportunity</button>
+    </form>
+    </section>
+
+<!-- contract management -->
+<section id="contract-management">
+  <h2>Contract Management</h2>
+  <form id="contractCreationForm">
+    <label for="vendorId">Vendor ID:</label>
+    <input type="text" id="vendorId" name="vendorId" required>
+    <label for="entityId">Entity ID:</label>
+    <input type="text" id="entityId" name="entityId" required>
+    <label for="contractTerms">Contract Terms:</label>
+    <textarea id="contractTerms" name="contractTerms" required></textarea>
+    <button type="submit">Create Contract</button>
+  
+  <!-- Contact -->
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact__container bd-grid">
+      <form action="" class="contact__form">
+        <input type="text" placeholder="Name" class="contact__input">
+        <input type="mail" placeholder="Email" class="contact__input">
+        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+        <input type="submit" value="Submit" class="contact__button button">
+      </form>
+    </div>
+  </section>
+
+  <nav class="menu menu-support" role="navigation" aria-label="Menu Support">
+
+    <label>Support</label> 
+
+<ul role="list" id="support-nav" class="nav-menu"><li id="menu-item-1463" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1463"><a href="https://www.procurify.com/support/" itemprop="url">Contact Support</a></li>
+<li id="menu-item-1464" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1464"><a target="_blank" rel="noopener" href="https://www.procurify.com/login/" itemprop="url">Product Login</a></li>
+<li id="menu-item-1466" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1466"><a target="_blank" rel="noopener" href="https://status.procurify.com/" itemprop="url">System Status</a></li>
+</ul>
+</nav>	
+	
+
+</main>
+
+  <!-- Footer -->
+  <footer class="footer section">
+    <div class="footer__container bd-grid">
+      <div class="footer__box">
+        <h3 class="footer__title">ProcureTech</h3>
+        <p class="footer__description">Procurement Management System</p>
+      </div>
+
+      <div class="footer__box">
+        <h3 class="footer__title">Links</h3>
+        <ul>
+          <li><a href="#home" class="footer__link">Home</a></li>
+          <li><a href="#governmentEntity" class="footer__link">Government Entity</a></li>
+          <li><a href="#Tenders" class="footer__link">Tenders</a></li>
+          <li><a href="#contact" class="footer__link">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__data">
+        <h3 class="footer__title">Email</h3>
+        <a href="julianawino99@gmail.com" class="footer__social">julianawino99@gmail.com</a>
+      </div>
+
+    </div>
+  </footer>
+
+<!--===== SCROLL REVEAL =====-->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <!-- Link to JavaScript files -->
+  <script src="public\js\login.js"></script>
+  <script src="public\js\register.js"></script>
+  <script src="public\js\tendering.js"></script>
+  <script src="public\js\requisition.js"></script>
+  <script src="public\js\contractManagement.js"></script>
+  <script src="public\js\app.js"></script>
+
+</body>
+</html>
