@@ -15,7 +15,7 @@
   --text-color: #697477;
 }
 
-/*===== Fuente y tipografia =====*/
+/*===== Font=====*/
 :root {
   --body-font: "Montserrat", sans-serif;
   --big-font-size: 6.25rem;
@@ -32,7 +32,7 @@
   }
 }
 
-/*===== Margenes =====*/
+/*===== Margins =====*/
 :root {
   --mb-1: 0.5rem;
   --mb-2: 1rem;
@@ -528,4 +528,12 @@ margin-top: 1.5rem;}
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+#Tendering .h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-style: var(--white-color);
 }
